@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.App{
+    background-color: black;   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "dis dis dis dis"
+    "AC C division times"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero dot equal";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.padButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #80ED99;
+    color: black;
+    border: 1px solid #22577a;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.dis{
+    grid-area: dis;
+    background-color: black;
+    text-align: right;
+    font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#zero{
+    grid-area: zero;
+}
+
+#equals{
+    grid-area: equal;
+    background-color: #22577A;
+}
+
+.operation{
+    background-color: #C7F9CC;
+}
+
+.control{
+    background-color: #38A3A5;
+}
+
+.total{
+    color: azure;
+    font-size: 25px;
+}
+
+.displayExp{
+    text-align: right;
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: #38A3A5;
 }
